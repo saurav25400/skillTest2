@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       const response2 = await fetch(
-        `http://www.omdbapi.com/?t=${inputValue}&plot=full&apikey=b8d42e41`
+        `https://www.omdbapi.com/?t=${inputValue}&plot=full&apikey=b8d42e41`
       );
       const data2 = await response2.json();
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${inputValue}&apikey=b8d42e41`
+        `https://www.omdbapi.com/?s=${inputValue}&apikey=b8d42e41`
       );
       const data = await response.json();
       console.log(data.Search);
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <p class="card-text">${movie.Year}</p>
                   <p class="card-text" style="display:none">${data2Value.Plot}</p>
                   
-                  <a href="../html/MovieDetails.html" target="_blank"class="btn btn-warning ms-4">Click for more Info</a>
+                  <a href="./MovieDetails.html" class="btn btn-warning ms-4">Click for more Info</a>
                   <button type="button" class="btn btn-info mt-3 favourites">Click to Add To Favourites</button>
               </div>
           `;
